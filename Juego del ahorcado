@@ -1,0 +1,24 @@
+import random
+
+palabra_objetivo = "caracteristica"
+letra = "c"
+total_letras = len(palabra_objetivo)
+juego=[]
+objetivo=[]
+
+
+for i in range(total_letras):
+    juego.append("_")
+
+for l in palabra_objetivo:
+    objetivo.append(l)
+    
+def jugada(juego, objetivo, letra):
+    for i in range(len(objetivo)):
+        if letra== objetivo[i]:
+            juego[i]=letra
+    return juego
+
+print(juego)
+jugada(juego,objetivo,letra)
+print(juego)
